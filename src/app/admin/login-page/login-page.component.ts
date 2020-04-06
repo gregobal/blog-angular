@@ -26,6 +26,8 @@ export class LoginPageComponent implements OnInit {
     this.route.queryParams.subscribe((params: Params) => {
       if (params.loginAgain) {
         this.message = 'Войдите заново';
+      } else if (params.authFailed) {
+        this.message = 'сессия истекла. Войдите заново';
       }
     });
 
@@ -55,7 +57,7 @@ export class LoginPageComponent implements OnInit {
 
     this.auth.login(user).subscribe(() => {
       this.form.reset();
-      this.router.navigate(['admin', 'dashboard']);
+      this.router.navigate(['/admin', 'dashboard']);
       this.submitted = false;
     }, () => {
       this.submitted = false;

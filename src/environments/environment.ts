@@ -7,7 +7,8 @@ import keys from '../../keys';
 
 export const environment: Environment = {
   production: false,
-  apiKey: keys.apiKey
+  apiKey: keys.apiKey,
+  fbDbUrl: keys.fbDbUrl
 };
 
 /*
