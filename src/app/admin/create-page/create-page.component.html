@@ -11,7 +11,7 @@
       *ngIf="form.get('title').touched && form.get('title').invalid"
       class="validation"
     >
-      <small *ngIf="form.get('title').errors.required">Заполните название статьи</small>
+      <small *ngIf="form.get('title').errors.required">Введите название статьи</small>
     </div>
   </div>
 
@@ -30,7 +30,7 @@
       *ngIf="form.get('author').touched && form.get('author').invalid"
       class="validation"
     >
-      <small *ngIf="form.get('author').errors.required">Заполните имя автора</small>
+      <small *ngIf="form.get('author').errors.required">Введите имя автора</small>
     </div>
   </div>
 
