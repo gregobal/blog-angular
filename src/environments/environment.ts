@@ -8,7 +8,7 @@ import keys from '../../keys';
 export const environment: Environment = {
   production: false,
   apiKey: keys.apiKey,
-  fbDbUrl: keys.fbDbUrl
+  fbDbUrl: 'https://blog-angular-323c0.firebaseio.com/'
 };
 
 /*

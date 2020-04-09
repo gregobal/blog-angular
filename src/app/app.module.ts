@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import {AuthInterceptor} from './admin/shared/auth.interceptor';
 import {AuthService} from './admin/shared/services/auth.service';
 import {registerLocaleData} from '@angular/common';
 import ruLocale from '@angular/common/locales/ru';
+import { environment } from '../environments/environment';
 
 registerLocaleData(ruLocale, 'ru');
 
@@ -27,7 +29,8 @@ registerLocaleData(ruLocale, 'ru');
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     AuthService,

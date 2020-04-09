@@ -47,3 +47,5 @@ Thumbs.db
 
 # other
 keys.js
+.firebase
+.firebaserc
